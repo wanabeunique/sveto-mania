@@ -1,0 +1,17 @@
+// Стили для любой страницы
+
+@import "./default/mixins";
+@import "./default/vars";
+@import "./default/fonts";
+@import "./default/vendor";
+@import "./default/settings";
+@import "./default/universal";
+
+// Блоки
+
+// Компоненты страницы
+
+@import "./components/universal/preloader";
+@import "./components/universal/header";
+@import "./components/index/hero";
+@import "./components/universal/footer";

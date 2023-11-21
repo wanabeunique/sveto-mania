@@ -1,0 +1,20 @@
+// Раскоментировать, если нужен формат .webp
+// import webp from 'gulp-webp';
+import imagemin from 'gulp-imagemin';
+
+export const images = () => {
+  return app.gulp.src(app.path.watch.images, { sourcemaps: app.isBuild })
+    .pipe(app.plugins.newer(app.path.src.images))
+    // Раскоментировать, если нужен формат .webp
+    // .pipe(app.plugins.if(app.isBuild, webp())) 
+    .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
+    .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.images)))
+    .pipe(app.plugins.if(app.isBuild, imagemin({
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      interlaced: true,
+      optimizationLevel: 3, // 0 to 7
+    })))
+    .pipe(app.gulp.dest(app.path.build.images))
+    .pipe(app.plugins.browsersync.stream())
+}

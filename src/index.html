@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/universal/head.html', {
+"stylesFileName": "index",
+"scriptsFileName": "index",
+"title": "Document",
+"font_urls": ["merriweather-400", "merriweather-700"],
+"preloader_img_url": "@svg/icon-tg.svg"
+})
+
+<body>
+  @include('partials/universal/preloader.html')
+  @include('partials/universal/header.html')
+  <main class="main">
+    <!-- Инлайн-стили прописаны для примера! -->
+    <img src="./img/images.jpg" alt="" style="font-size: 0;" /> <!-- Первый вариант подключения фотографий -->
+    <img src="@svg/icon-tg.svg" alt="" style="width: 50px; height: 50px;" />
+    <!-- Второй вариант подключения фотографий -->
+    @include('partials/index/hero.html')
+  </main>
+  @include('partials/universal/footer.html')
+</body>
+
+</html>
