@@ -1,0 +1,15 @@
+.nav{
+  background: var(--red-color);
+  &__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link{
+    color: var(--white-color);
+    font-weight: 800;
+  }
+  &__item{
+    padding: 15px 0;
+  }
+}

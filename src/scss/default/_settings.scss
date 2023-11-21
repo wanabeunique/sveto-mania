@@ -109,3 +109,8 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+body, *{
+  box-sizing: border-box;
+}
+

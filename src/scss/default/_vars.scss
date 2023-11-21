@@ -1,13 +1,19 @@
 :root {
   // Цвета
-  --color-white: #fff;
-  --color-black: #000;
+  --white-color: white;
+  --black-color: #383838;
+  --black-color-02: #373737;
+  --red-color: #dc2f2f;
 
   // Шрифты
-  --font-family: "Merriweather";
+  --font-family: "Gilroy";
 
   // Размеры контейнера
-  --content-width: 1120px;
+  --content-width: 1140px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --padding: 5px;
+  --offset: 10px;
+  --gap: 10px;
 }

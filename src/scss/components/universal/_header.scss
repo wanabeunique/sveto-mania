@@ -1,0 +1,48 @@
+.header{
+  .burger{
+    display: none;
+    @include burger(30px, 30px, 2px, var(--black-color));
+  }
+  &__container{
+    display: flex;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: calc(var(--padding) * 7);
+    padding-bottom: calc(var(--padding) * 6);
+  }
+  &__nav{
+    display: flex;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__city{
+    text-decoration: underline;  
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: max-content;
+    background: none;
+    border: none;
+  }
+  &__contacts{
+    display: flex;
+    align-items: start;
+    gap: 4px;
+  }
+  &__phone{
+    font-size: 1.375em;
+    font-weight: 800;
+    text-align: end;
+  }
+  &__time{
+    font-size: .75em;
+    text-align: end;
+  }
+  
+}
