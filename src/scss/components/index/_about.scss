@@ -1,0 +1,110 @@
+.about {
+  margin-bottom: calc(var(--offset) * 8);
+  margin-top: calc(var(--offset) * 8);
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    margin-bottom: calc(var(--offset) * 3);
+    &--row {
+      margin-bottom: calc(var(--offset) * 5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20%;
+    }
+  }
+  &__photo {
+    width: 100%;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(var(--gap) * 3);
+  }
+  &__title {
+    max-width: 900px;
+    &--small {
+      text-align: end;
+      font-size: 1.125rem;
+      font-weight: 800;
+    }
+  }
+  &__subtitle {
+    font-weight: 800;
+    text-align: center;
+    margin-top: calc(var(--offset) * 1.5);
+  }
+  &__text {
+    text-align: center;
+    margin-top: var(--offset);
+  }
+  &__ceiling {
+    margin-top: calc(var(--offset) * 9);
+  }
+  &__shopper {
+    width: max-content;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: calc(var(--offset) * 2);
+  }
+  &__purpose {
+    max-width: 55%;
+    text-align: center;
+    margin-top: calc(var(--offset) * 6);
+    position: relative;
+    width: max-content;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -10px;
+      background: url("@img/arrow.png");
+      width: 80px;
+      height: 60px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    &__top {
+      &--row {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    &__title {
+      &--small {
+        text-align: start;
+      }
+    }
+    &__items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    &__purpose {
+      &:after {
+        right: -40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    &__purpose {
+      max-width: 80%;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

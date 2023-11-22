@@ -1,0 +1,97 @@
+.options {
+  margin-top: calc(var(--offset) * 6.5);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(var(--gap) * 3);
+    margin-top: calc(var(--offset) * 5);
+  }
+  &__item {
+    border: 1px solid #000000;
+    background: var(--white-color);
+    box-shadow: 0px 46px 101px 0px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(var(--padding) * 3) calc(var(--padding) * 4.5);
+  }
+  &__photo {
+    display: flex;
+    height: 140px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__title {
+    align-self: start;
+    max-width: 700px;
+    &--small {
+      font-size: 1.64rem;
+      font-weight: 800;
+      margin: 0;
+    }
+  }
+  &__subtitle {
+    margin: 0;
+    font-weight: 800;
+    margin-top: calc(var(--offset) * 4);
+  }
+  &__text {
+    margin: 0;
+    margin-top: calc(var(--offset) * 1.5);
+    text-align: center;
+    &--small {
+      font-size: 0.75rem;
+      margin: 0;
+    }
+  }
+  &__button {
+    margin-top: calc(var(--offset) * 2);
+  }
+  &__questions {
+    margin-top: calc(var(--offset) * 4);
+    padding: calc(var(--padding) * 6);
+    background: url("@img/options-bg.png") no-repeat center center;
+    background-size: cover;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .options {
+    &__items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    &__item {
+      padding: 20px;
+    }
+    &__questions {
+      width: 100%;
+    }
+    &__photo {
+      height: 80px;
+      img {
+        object-fit: contain;
+      }
+    }
+    &__subtitle {
+      text-align: center;
+    }
+  }
+}

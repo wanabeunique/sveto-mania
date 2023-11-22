@@ -61,3 +61,34 @@
     width: 138px;
   }
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: calc(var(--gap) * 2);
+      justify-content: center;
+    }
+    &__column {
+      .text {
+        display: none;
+      }
+    }
+    &__title.text {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .footer{
+    &__text{
+      max-width: 80%;
+    }
+    &__title{
+      font-size: 1.2rem;
+    }
+  }
+}

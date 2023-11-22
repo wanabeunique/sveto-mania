@@ -7,6 +7,8 @@
 
   // Шрифты
   --font-family: "Gilroy";
+  --font-size: 16px;
+  --title-font-size: 48px;
 
   // Размеры контейнера
   --content-width: 1140px;
@@ -16,4 +18,21 @@
   --padding: 5px;
   --offset: 10px;
   --gap: 10px;
+}
+
+@media (max-width: 768px){
+ :root{
+  --padding: 2px;
+  --offset: 5px;
+  --gap: 5px;
+
+  --font-size: 12px;
+  --title-font-size: 36px;
+ }
+}
+
+@media (max-width: 480px){
+ :root{
+  --title-font-size: 26px;
+ }
 }

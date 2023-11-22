@@ -114,3 +114,9 @@ body, *{
   box-sizing: border-box;
 }
 
+.tabs__content--item{
+  display: none;
+}
+.active-tab{
+  display: block;
+}

@@ -1,4 +1,8 @@
 .nav{
+  display: flex;
+  &--mobile{
+    display: none;
+  }
   background: var(--red-color);
   &__container{
     width: 100%;
@@ -12,4 +16,27 @@
   &__item{
     padding: 15px 0;
   }
+}
+
+@media(max-width: 768px){
+  .nav{
+    display: none;
+    background: none;
+    margin-bottom: 20px;
+    &--mobile{
+      display: block;
+    }
+    &__container{
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__item{
+      padding: 0;
+    }
+    &__link{
+      font-size: 1.5rem;
+      color: var(--red-color);
+    }
+  }
+
 }

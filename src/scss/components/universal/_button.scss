@@ -3,7 +3,7 @@
   border: 1px solid var(--red-color);
   border-radius: 10px;
   background: none;
-  font-size: 16px;
+  font-size: var(--font-size);
   line-height: 1.2;
   font-weight: 800;
   padding: calc(var(--padding) * 3.5) calc(var(--padding) * 6) ;
