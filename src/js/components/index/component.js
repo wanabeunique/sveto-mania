@@ -1,19 +1,24 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css/bundle';
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/bundle";
 
-document.querySelector('.header__burger').addEventListener('click', () => {
-  document.querySelector('.header__menu').classList.toggle('active')
-})
+document.querySelector(".header__burger").addEventListener("click", () => {
+  document.querySelector(".header__menu").classList.toggle("active");
+  if (document.querySelector(".header__menu").classList.contains("active")) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+});
 
-const swiper = new Swiper('.slider__content', {
+const swiper = new Swiper(".slider__content", {
   modules: [Navigation, Pagination],
   loop: true,
   navigation: {
-    nextEl: '.slider__next',
-    prevEl: '.slider__prev',
+    nextEl: ".slider__next",
+    prevEl: ".slider__prev",
   },
-})
+});
 
 const tabs = [...document.querySelectorAll(".tabs")];
 
@@ -51,4 +56,49 @@ function switchTab(select, i) {
     }
     item.classList.add("active-tab");
   });
+}
+
+// calculator
+const invoiceWrapper = document.querySelector(".calculator__invoice");
+const invoiceFields = [
+  ...invoiceWrapper.querySelectorAll(".calculator__field"),
+];
+invoiceFields.forEach((el) => (el.onclick = (event) => setInvoice(event)));
+
+const companyWrapper = document.querySelector(".calculator__company");
+const companyFields = [
+  ...companyWrapper.querySelectorAll(".calculator__field"),
+];
+companyFields.forEach((el) => (el.onclick = (event) => setCompany(event)));
+
+const calcs = [...document.querySelectorAll(".calculator__area")];
+calcs.forEach((calc) => {
+  calc.querySelector(".calculator__minus").addEventListener("click", () => {
+    let value = calc.querySelector(".calculator__value").innerText.toString();
+    if (value > 0) {
+      value--;
+    }
+    calc.querySelector(".calculator__value").innerText = value;
+  });
+  calc.querySelector(".calculator__plus").addEventListener("click", () => {
+    let value = calc.querySelector(".calculator__value").innerText.toString();
+    value++;
+    calc.querySelector(".calculator__value").innerText = value;
+  });
+});
+
+function getRes() {}
+
+function getInvoice() {}
+
+function setInvoice(e) {
+  const fields = [...invoiceWrapper.querySelectorAll(".calculator__field")];
+  fields.forEach((field) => field.classList.remove("active"));
+  event.target.classList.add("active");
+}
+
+function setCompany(e) {
+  const fields = [...companyWrapper.querySelectorAll(".calculator__field")];
+  fields.forEach((field) => field.classList.remove("active"));
+  event.target.classList.add("active");
 }

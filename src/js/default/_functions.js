@@ -16,10 +16,10 @@
 // import { burger } from '../functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from '../functions/disableScroll';
+import { disableScroll } from '../functions/disableScroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from '../functions/enableScroll';
+import { enableScroll } from '../functions/enableScroll';
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from '../functions/headerHeight';
