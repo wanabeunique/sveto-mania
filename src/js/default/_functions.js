@@ -16,7 +16,7 @@
 // import { burger } from '../functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-import { disableScroll } from '../functions/disableScroll';
+// import { disableScroll } from '../functions/disableScroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
 import { enableScroll } from '../functions/enableScroll';

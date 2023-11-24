@@ -1,32 +1,32 @@
 <section class="calculator">
-  <div class="calculator__container container">
+  <form  id="form" class="calculator__container container">
     <p class="calculator__title title">
       Рассчитайте примерную стоимость натяжного потолка с установкой
     </p>
     <div class="calculator__content">
       <div class="calculator__column">
         <p class="text calculator__name">1. Фактура</p>
-        <div class="calculator__invoice">
-          <div class="text calculator__field active"">Матовые</div>
-          <div class="text calculator__field">Глянцевые</div>
-          <div class="text calculator__field">Сатиновые</div>
-          <div class="text calculator__field">Тканевые</div>
+        <div class="calculator__invoice" >
+          <div class="text calculator__field active" data-type="matte">Матовые</div>
+          <div class="text calculator__field" data-type="glossy">Глянцевые</div>
+          <div class="text calculator__field" data-type="satin">Сатиновые</div>
+          <div class="text calculator__field" data-type="cloth">Тканевые</div>
         </div>
       </div>
       <div class="calculator__column">
         <p class="text calculator__name">2. Производитель</p>
         <div class="calculator__company">
-          <div class="text calculator__field active">MSD Classic</div>
-          <div class="text calculator__field">MSD Premium</div>
-          <div class="text calculator__field">MSD Evolution</div>
-          <div class="text calculator__field">MSD Cold Stretch</div>
-          <div class="text calculator__field">Teqtum KM2</div>
-          <div class="text calculator__field">Teqtum EURO</div>
-          <div class="text calculator__field">Lumfer</div>
-          <div class="text calculator__field">Bauf 205</div>
-          <div class="text calculator__field">Bauf 230</div>
-          <div class="text calculator__field">Bauf 270</div>
-          <div class="text calculator__field">Halead</div>
+          <!-- <div class="text calculator__field active">MSD Classic</div> -->
+          <!-- <div class="text calculator__field">MSD Premium</div> -->
+          <!-- <div class="text calculator__field">MSD Evolution</div> -->
+          <!-- <div class="text calculator__field">MSD Cold Stretch</div> -->
+          <!-- <div class="text calculator__field">Teqtum KM2</div> -->
+          <!-- <div class="text calculator__field">Teqtum EURO</div> -->
+          <!-- <div class="text calculator__field">Lumfer</div> -->
+          <!-- <div class="text calculator__field">Bauf 205</div> -->
+          <!-- <div class="text calculator__field">Bauf 230</div> -->
+          <!-- <div class="text calculator__field">Bauf 270</div> -->
+          <!-- <div class="text calculator__field">Halead</div> -->
         </div>
       </div>
       <div class="calculator__column">
@@ -36,7 +36,7 @@
             <p class="text calculator__subtitle">Площадь, м²</p>
             <div class="calculator__calc">
               <div class="calculator__minus"></div>
-              <div class="calculator__value">0</div>
+              <div class="calculator__value calculator__space">0</div>
               <div class="calculator__plus"></div>
             </div>
           </div>
@@ -44,7 +44,7 @@
             <p class="text calculator__subtitle">Углы, шт</p>
             <div class="calculator__calc">
               <div class="calculator__minus"></div>
-              <div class="calculator__value">0</div>
+              <div class="calculator__value calculator__corner" data-corner=true>0</div>
               <div class="calculator__plus"></div>
             </div>
           </div>
@@ -57,7 +57,7 @@
             <p class="text calculator__subtitle">Светильники, шт</p>
             <div class="calculator__calc">
               <div class="calculator__minus"></div>
-              <div class="calculator__value">0</div>
+              <div class="calculator__value calculator__lamp">0</div>
               <div class="calculator__plus"></div>
             </div>
           </div>
@@ -65,19 +65,19 @@
             <p class="text calculator__subtitle">Люстры, шт</p>
             <div class="calculator__calc">
               <div class="calculator__minus"></div>
-              <div class="calculator__value">0</div>
+              <div class="calculator__value calculator__lamp--secondary"">0</div>
               <div class="calculator__plus"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div action="" class="calculator__bottom">
+    <div class="calculator__bottom">
      <p class="text calculator__res">Итоговая стоимость: <span><span class="calculator__price">0</span> рублей</span></p>
       <div class="calculator__form">
-        <input type="text" class="calculator__input">
-        <button class="button button--red">Рассчитать</button>
+        <input placeholder="+7 (___) ___-__-__" type="tel" type="text" class="text calculator__input" id="phone">
+        <button  class="button button--red">Рассчитать</button>
       </div>
     </div>
-  </div>
+  </form>
 </section>
