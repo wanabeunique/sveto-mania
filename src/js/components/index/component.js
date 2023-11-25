@@ -22,7 +22,7 @@ const rules = [
 ];
 
 function afterForm() {
-  console.log("Заявка отправлена");
+  document.querySelector('.calculator__form').innerHTML = '<p class="text">Заявка успешно отправлена</p>'
 }
 
 validateForms("#form", rules, afterForm);

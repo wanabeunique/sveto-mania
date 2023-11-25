@@ -42,6 +42,23 @@ export default function validateForms (selector, rules, afterSend) {
 
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
+    const phone = document.querySelector('.calculator__input').value
+    const price = document.querySelector('.calculator__price').innerHTML
+    const invoice = document.querySelector('.calculator__invoice').querySelector('.calculator__field.active').innerHTML
+    const company = document.querySelector('.calculator__company').querySelector('.calculator__field.active').innerHTML
+    const space = document.querySelector('.calculator__space').innerHTML
+    const corner = document.querySelector('.calculator__corner').innerHTML
+    const lamp = document.querySelector('.calculator__lamp').innerHTML
+    const lamp2 = document.querySelector('.calculator__lamp--secondary').innerHTML
+
+    formData.append('Телефон', phone)
+    formData.append('Стоимость', price)
+    formData.append('Фактура', invoice)
+    formData.append('Производитель', company)
+    formData.append('Площадь', space)
+    formData.append('Углы', corner)
+    formData.append('Светильники', lamp)
+    formData.append('Люстры', lamp2)
 
     let xhr = new XMLHttpRequest();
 

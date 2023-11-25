@@ -62,7 +62,6 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   &__item {
-    border: 1px solid #000000;
     box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.14);
     border-radius: 10px;
     background: var(--white-color);
@@ -96,7 +95,6 @@
     height:  64px;
     border-radius: 100%;
     background: var(--white-color);
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;

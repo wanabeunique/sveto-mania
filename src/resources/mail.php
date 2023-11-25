@@ -6,6 +6,7 @@ require 'phpmailer/Exception.php';
 
 $title = "Тема письма";
 $file = $_FILES['file'];
+print_r($file);
 
 $c = true;
 // Формирование самого письма
@@ -32,7 +33,7 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+  $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
   $mail->Username   = ''; // Логин на почте
   $mail->Password   = ''; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
@@ -63,6 +64,11 @@ try {
   $mail->Body = $body;
 
   $mail->send();
+  if ($mail->send()) {
+    echo "Сообщение успешно отправлено";
+  } else {
+      echo "Ошибка при отправке сообщения: " . $mail->ErrorInfo;
+  }
 
 } catch (Exception $e) {
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";

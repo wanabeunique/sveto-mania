@@ -19,7 +19,6 @@
   &__photo {
     position: relative;
     overflow: hidden;
-    border: 1px solid black;
     border-radius: 10px;
     width: 100%;
     max-width: 40vw;
@@ -39,7 +38,6 @@
     width: 44px;
     height: 44px;
     border-radius: 100%;
-    border: 1px solid #000;
     background: #dedede;
     top: 50%;
     transform: translateY(-50%);
